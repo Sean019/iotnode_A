@@ -12,9 +12,13 @@ int main()
 {
     iotDataQueue temperature, humidity, pressure; //create two queue objects
 
-    //int pressure;
+    int pressureVar, pressureVar2;
 
-    //pressure = cin;
+    cout << "please Enter Pressure Values: ";
+    cin >> pressureVar;
+    cout << "Please enter a second value: ";
+    cin >> pressureVar2;
+
 
     temperature.init();
     humidity.init();
@@ -22,11 +26,11 @@ int main()
 
     temperature.qput(10);
     humidity.qput(19);
-    pressure.qput(5);
+    pressure.qput(pressureVar);
 
     temperature.qput(20);
     humidity.qput(1);
-    pressure.qput(11);
+    pressure.qput(pressureVar2);
 
 
     cout << "Contents of Temperature queue: ";
