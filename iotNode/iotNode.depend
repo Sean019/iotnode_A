@@ -1,11 +1,20 @@
 # depslib dependency file v1.0
-1475528129 source:c:\users\sean\desktop\portablegit\iotnode_a\iotnode\main.cpp
+1483654945 source:c:\users\sean\desktop\portablegit\iotnode_a\iotnode\main.cpp
 	<iostream>
 	<iotDataQueue.h>
+	<sensorData.h>
 
-1475011393 c:\users\sean\desktop\portablegit\iotnode_a\iotnode\include\iotdataqueue.h
+1480803472 c:\users\sean\desktop\portablegit\iotnode_a\iotnode\include\iotdataqueue.h
 
-1475012003 source:c:\users\sean\desktop\portablegit\iotnode_a\iotnode\src\iotdataqueue.cpp
+1483653095 source:c:\users\sean\desktop\portablegit\iotnode_a\iotnode\src\iotdataqueue.cpp
 	"iotDataQueue.h"
 	<iostream>
+
+1480804162 c:\users\sean\desktop\portablegit\iotnode_a\iotnode\include\sensordata.h
+
+1483479590 source:c:\users\sean\desktop\portablegit\iotnode_a\iotnode\src\sensordata.cpp
+	"sensorData.h"
+	<stdlib.h>
+	<iostream>
+	<time.h>
 

@@ -35,8 +35,10 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/iotDataQueue.h" />
+		<Unit filename="include/sensorData.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/iotDataQueue.cpp" />
+		<Unit filename="src/sensorData.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

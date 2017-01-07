@@ -12,6 +12,8 @@ class iotDataQueue
         void init();
         void qput(int i);
         int qget();
+        int qDisplay();
+        int queueFull();
 
     protected:
 

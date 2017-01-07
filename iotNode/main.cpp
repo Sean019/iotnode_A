@@ -1,50 +1,42 @@
 #include <iostream>
 #include <iotDataQueue.h>
+#include <sensorData.h>
 
 using namespace std;
 
 //class is syntactically similar to a structure.
 //The class is C++'s basic unit of encapsulation
 
-
-
 int main()
 {
-    iotDataQueue temperature, humidity, pressure; //create two queue objects
+    //initialise objects of type iotDataQueue
+    iotDataQueue dataQueue;
 
-    int pressureVar, pressureVar2;
+    //initialise 2 objects of type sensorData.
+    sensorData temperature, humidity;
 
-    cout << "please Enter Pressure Values: ";
-    cin >> pressureVar;
-    cout << "Please enter a second value: ";
-    cin >> pressureVar2;
+    int dataIn;
+    char temp;
 
+    cout << "Press any key to access sensor data";
+    temp = cin.get();
+    //access the init method of the dataqueue object
+    dataQueue.init();
 
-    temperature.init();
-    humidity.init();
-    pressure.init();
+    //keep looping until the queueFull method returns a 0;
+    cout << "Setting up data queue \n";
+    while(dataQueue.queueFull()){
 
-    temperature.qput(10);
-    humidity.qput(19);
-    pressure.qput(pressureVar);
+    //access the dataGet method of the humidity object and store it in the dataIn variable
+    dataIn = humidity.dataGet();
+    dataQueue.qput(dataIn);
+    dataIn = temperature.dataGet();
+    dataQueue.qput(dataIn);
 
-    temperature.qput(20);
-    humidity.qput(1);
-    pressure.qput(pressureVar2);
+    }
 
-
-    cout << "Contents of Temperature queue: ";
-
-    cout << temperature.qget() << " ";
-    cout << temperature.qget() << "\n";
-
-    cout << "Contents of Humidity queue: ";
-    cout << humidity.qget() << " ";
-    cout << humidity.qget() << "\n";
-
-    cout << "Contents of Pressure queue: ";
-    cout << pressure.qget() << " ";
-    cout << pressure.qget() << "\n";
+    dataQueue.qDisplay();
 
     return 0;
 }
+

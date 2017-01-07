@@ -4,8 +4,6 @@ using namespace std;
 
 #include <iostream>
 
-
-
 iotDataQueue::iotDataQueue()
 {
     //ctor
@@ -21,24 +19,36 @@ void iotDataQueue::init()
     rloc = sloc = 0;
 }
 
-//initialise the queue
 void iotDataQueue::qput(int i)
 {
-    if(sloc==100){
+    if(sloc>=10){
         cout << "queue is full. \n";
         return;
     }
-    sloc++;
     q[sloc] = i;
+    sloc++;
+
 }
 
-//get an integer from the queue
-int iotDataQueue::qget()
+int iotDataQueue::qDisplay()
 {
-    if(rloc == sloc){
-        cout << "queue underflow. \n";
-        return 0;
+    cout << "Data Queue is full \n";
+    int i;
+    for(i = 0;i < 10; i++){
+
+        cout <<"Sensor reading " << i+1 << " is " << q[i] << "\n";
+
     }
-    rloc++;
-    return q[rloc];
+
+    return 0;
 }
+
+int iotDataQueue::queueFull()
+{
+    if(sloc == 10){
+       return 0;
+    }
+
+    return 1;
+}
+

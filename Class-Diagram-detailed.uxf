@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>150</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+Sensor
+--
+
+
+
+--
++sensorData();
++getData()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>430</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Humidity
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>430</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Temperature
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>330</y>
+      <w>130</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+     &lt;&lt;instanceOf&gt;&gt;            </panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>330</y>
+      <w>150</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>110</y>
+      <w>210</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>
+iotDataQueue
+
+--
+
+			-int q[10];
+			-int sloc,
+			-int rloc;
+--
+
+ +iotDataQueue();
+ +init();
+ +qput(int i);
+ +qget();
+ +qDisplay();
+ +queueFull();
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
